@@ -46,19 +46,35 @@ ll power(ll a, ll b, ll m = MOD)
 void solve()
 {
 
-    ll n;
-    cin >> n;
+    ll n,k;
+    cin >> n >> k;
     
+    vector<int>a(n);
 
-    // find the smallest x such that n % x != 0 , then ans will be (x-1) [ajib ques hai]
-    ull ans = 1;
-    for(ull x = 1 ;  ; x++){
-        if(n % x != 0){
-            ans = x - 1;
-            break;
-        }
+    for(int i = 0; i < n; i++) cin>> a[i];
+
+    sort(a.begin(), a.end());
+    vector<int>diff;
+    for(int i = 1; i < n; i++){
+        diff.push_back(a[i] - a[i-1]);
     }
-    cout<< ans<< endl;
+
+    int maxfreq = 0;
+    int freq = 0;
+    for(int i = 0 ;i < n-1 ;i++){
+        if(diff[i] <= k){
+            freq++;
+        }
+        else{
+            maxfreq = max(maxfreq,freq);
+            freq = 0;
+        }
+
+    }
+    maxfreq = max(maxfreq,freq);
+    cout<< n - (maxfreq + 1) << endl;
+
+    
     
 }
 
