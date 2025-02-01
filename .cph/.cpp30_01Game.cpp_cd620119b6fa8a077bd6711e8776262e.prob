@@ -1,0 +1,1 @@
+{"name":"Local: cpp30_01Game","url":"c:\\Users\\Sumit\\OneDrive\\Desktop\\frontend\\CP-900\\cpp30_01Game.cpp","tests":[{"id":1738403462387,"input":"3\n01\n1111\n0011\n","output":"DA\nNET\nNET\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Sumit\\OneDrive\\Desktop\\frontend\\CP-900\\cpp30_01Game.cpp","group":"local","local":true}
